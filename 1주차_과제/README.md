@@ -44,14 +44,15 @@
 
 ### :paperclip: 질문 거리 
 ![image](https://user-images.githubusercontent.com/43923432/109500061-1395ac00-7ad9-11eb-8a32-78b23494d27a.png)
- * server setting 
- [에러 코드]
+ * server setting</br>
+ **[에러 코드]**</br>
 **    Multiple annotations found at this line:
 	- Start tag of element <tomcat-users>
 	- cvc-elt.1.a: Cannot find the declaration of element 'tomcat-
 	 users'.
 **
-  ->이와 같이 오류가 뜨는데 server를 돌리는데는 아무런 문제가 없었습니다. 이게 인식을 못해서 이런 오류가 있는지 궁금합니다. 
+  </br>
+  **->이와 같이 오류가 뜨는데 server를 돌리는데는 아무런 문제가 없었습니다. 이게 인식을 못해서 이런 오류가 있는지 궁금합니다.** 
 
 
 
