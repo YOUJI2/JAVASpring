@@ -32,10 +32,26 @@
 ### :paperclip: MovieVO.java
  **VO(Value Object)**
   * 대략적으로 값 객체 패턴(value object pattern) 즉, 객체를 값처럼 쓸 수 있고, 제약사항 중 하나는 객체의 인스턴스 변수가 생성자를 통해서 일단 설정된 후에는 결코 변하지 않음을 보장한다는 것입니다. 
-  * Value Object는 불변의 특성이 있다. 한번 생성되면 이후 내부 값을 바꿀 수 없어야한다.
-  Setter를 허용하지 않아야한다.
+  * **Value Object는 불변의 특성이 있다. 한번 생성되면 이후 내부 값을 바꿀 수 없어야한다.**
+  [Setter를 허용하지 않아야한다.]
 ![image](https://user-images.githubusercontent.com/43923432/109499788-b26dd880-7ad8-11eb-8cfa-0214f2291a08.png)
 
+
+### :paperclip: 실제 Server구동시
+![image](https://user-images.githubusercontent.com/43923432/109499901-d6c9b500-7ad8-11eb-98d6-ee0a54c6a0b0.png)
+
+==========================
+
+### :paperclip: 질문 거리 
+![image](https://user-images.githubusercontent.com/43923432/109500061-1395ac00-7ad9-11eb-8a32-78b23494d27a.png)
+ * server setting 
+ [에러 코드]
+**    Multiple annotations found at this line:
+	- Start tag of element <tomcat-users>
+	- cvc-elt.1.a: Cannot find the declaration of element 'tomcat-
+	 users'.
+**
+  ->이와 같이 오류가 뜨는데 server를 돌리는데는 아무런 문제가 없었습니다. 이게 인식을 못해서 이런 오류가 있는지 궁금합니다. 
 
 
 
