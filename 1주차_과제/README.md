@@ -49,7 +49,7 @@
     Multiple annotations found at this line:
 	- Start tag of element 'tomcat-users'
 	- cvc-elt.1.a: Cannot find the declaration of element 'tomcat-users'.
-	- </br>
+ </br>
  [이와 같이 오류가 뜨는데 server를 돌리는데는 아무런 문제가 없었습니다. 이게 인식을 못해서 이런 오류가 있는지 궁금합니다.] 
 
 
