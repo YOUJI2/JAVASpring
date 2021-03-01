@@ -44,7 +44,7 @@
 
 ### :paperclip: 질문 거리 
 ![image](https://user-images.githubusercontent.com/43923432/109500061-1395ac00-7ad9-11eb-8a32-78b23494d27a.png)
- * server setting</br>
+ * tomcat-users.xml 파일 </br>
  **[에러 코드]**</br>
     Multiple annotations found at this line:
 	- Start tag of element 'tomcat-users'
