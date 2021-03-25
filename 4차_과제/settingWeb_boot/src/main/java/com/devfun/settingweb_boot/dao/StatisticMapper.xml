@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="com.devfun.settingweb_boot.dao.StatisticMapper">
+ 
+ 	<!-- 해당년도의 로그인 수 -->
+    <select id="selectYearLogin" parameterType="string" resultType="hashMap">
+        select count(*) as totCnt
+        from statistc.requestinfo r
+        where left(r.createDate, 2) = #{year};
+    </select>
+    
+    <!-- 월별 접속자 수 -->
+    <select id="selectMonthLogin" parameterType="string" resultType="hashMap">
+		select count(*) as totCnt
+		from statistic.requestinfo r
+		where mid(r.createDate, 3,4) = #{month};
+    </select>
+
+	<!-- 일별 접속자 수  -->
+    <select id="selectDateLogin" parameterType="string" resultType="hashMap">
+		select count(*) as totCnt
+		from statistic.requestinfo r
+		where mid(r.createDate, 5,6) = #{date};
+    </select>
+
+
+	<!-- 공휴일을 제외한 로그인 수 (년도 , 월 입력 ) -->
+	<select id="selectExcludeHolidayLogin" parameterType="java.util.Map" resultType="hashMap">
+		select count(*) toCnt
+		from statistic.requestinfo r
+		where NOT left(r.createDate, 6) in
+		<foreach item="item" index="index" collection="list" open="(" separator="," close=")">
+		    #{item}
+		</foreach>
+	</select>
+		
+	<!-- 부서별 월별 로그인 수 -->
+	<select id="selectOrganMonthLogin" parameterType="java.util.Map" resultType="hashMap">
+		select count(*) toCnt
+		from statistic.requestinfo r, statistic.user us
+		where r.userId = #{statisticDto.userId} and mid(r.createDate, 3,4) = #{statisticDto.month} and us.hr_organ = #{statisticDto.organ};
+	</select>
+</mapper>
